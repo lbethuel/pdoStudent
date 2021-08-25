@@ -2,7 +2,7 @@
 require_once 'vendor/autoload.php';
 
 use Alura\Pdo\Domain\Model\Student;
-use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
+use Alura\Pdo\Domain\Infrastructure\Persistence\ConnectionCreator;
 
 $pdo = ConnectionCreator::creatorConnection();
 

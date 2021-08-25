@@ -1,8 +1,8 @@
 <?php
 
 use Alura\Pdo\Domain\Model\Student;
-use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
-use Alura\Pdo\Infrastructure\Repository\PdoStudentRepository;
+use Alura\Pdo\Domain\Infrastructure\Persistence\ConnectionCreator;
+use Alura\Pdo\Domain\Infrastructure\Repository\PdoStudentRepository;
 
 require_once 'vendor/autoload.php';
 
@@ -12,8 +12,8 @@ $studentRepository = new PdoStudentRepository($connection);
 $connection->beginTransaction();
 
 $aStudent = new Student(
-    null, 
-    'Marlon', 
+    null,
+    'Marlon',
     new DateTimeImmutable('1949-05-01')
 );
 
@@ -27,4 +27,4 @@ $anotherStudent = new Student(
 
 $studentRepository->save($anotherStudent);
 
-$connection->commit();
+$connection->rollBack();

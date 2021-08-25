@@ -1,6 +1,6 @@
 <?php
 
-use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
+use Alura\Pdo\Domain\Infrastructure\Persistence\ConnectionCreator;
 
 require_once 'vendor/autoload.php';
 
