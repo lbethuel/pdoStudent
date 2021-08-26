@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Alura\\Pdo\\Domain\\' => array($baseDir . '/src'),
+    'Alura\\Pdo\\' => array($baseDir . '/src'),
 );
